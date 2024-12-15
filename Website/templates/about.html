@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Brain Tumor Detection</title>
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" %3E%3Cg fill="%23ddd" fill-opacity="0.4"%3E%3Cpath d="M0 100 V10 L20 0 L40 10 L60 100 L80 10 L100 0 V100z" /%3E%3C/g%3E%3C/svg%3E');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        header {
+            background: linear-gradient(to right, #606c88, #3f4c6b);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .icon {
+            height: 75px;
+            width: 80px;
+            background-image: url("https://logowik.com/content/uploads/images/ucla-bruins8821.jpg");
+            background-position: center;
+            background-size: cover;
+            margin-right: 165px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #a8d0e6;
+            text-decoration: underline;
+        }
+        .content {
+            width: 50%; /* Limit the width to half of the screen */
+            margin: 20px auto; /* Center the content horizontally */
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: justify; /* Improve readability of longer texts */
+        }
+        h1, h2, h4, p {
+            color: #333;
+            margin: 0;
+            padding-bottom: 15px;
+            text-align: center; /* Center titles for a cohesive look */
+            font-size: 20px;
+        }
+        h1{
+            color: darkblue;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 25px;
+        }
+        p{
+            text-align: left;
+        }
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <div class="icon"></div>
+        <div class="head">
+            <h2>Brain Tumor Detection</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/detect">Detect Brain Tumor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Typically Benign Brain Tumors</h1>
+        <h4>Meningioma</h4>
+        <p>Meningioma is the most common primary brain tumor, accounting for more than 30% of all brain tumors. Meningiomas originate in the meninges, the outer three layers of tissue that cover and protect the brain just under the skull. Women are diagnosed with meningiomas more often than men. About 85% of meningiomas are noncancerous, slow-growing tumors. Almost all meningiomas are considered benign, but some meningiomas can be persistent and come back after treatment.</p>
+        <h4>Pituitary Adenoma</h4>
+        <p>Adenoma, a type of tumor that grows in the gland tissues, is the most common type of pituitary tumor. Pituitary adenomas develop from the pituitary gland and tend to grow at a slow rate. About 10% of primary brain tumors are diagnosed as adenomas. They can cause vision and endocrinological problems. Fortunately for patients affected by them, adenomas are benign and treatable with surgery and/or medication.</p>
+    </div>
+    <div class="content">
+        <h1>Malignant Brain Tumors with Variable Grades</h1>
+        <h4>Glioma</h4>
+        <p>Glioma is a common type of tumor originating in the brain, but it can sometimes be found in the spinal cord. About 33% of all brain tumors are gliomas. These tumors arise from the glial cells that surround and support neurons. There are several types of glial cells, hence there are many types of gliomas, including: Astrocytomas, Oligodendrogliomas, Glioblastomas</p>
+        <p>Astrocytomas: A common form is pilocytic astrocytoma, a benign brain tumor arising from the supporting brain cells and usually found in young adults or children. It can be treated with surgery if the entire tumor can be removed.</p>
+    </div>
+    <div class="content">
+        <p>Learn more about <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/brain-tumor/brain-tumor-types" target="_blank">Brain Tumor Types</a>.</p>
+    </div>
+</body>
+</html>

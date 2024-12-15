@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Brain Tumor Detection</title>
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" %3E%3Cg fill="%23ddd" fill-opacity="0.4"%3E%3Cpath d="M0 100 V10 L20 0 L40 10 L60 100 L80 10 L100 0 V100z" /%3E%3C/g%3E%3C/svg%3E');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        header {
+            background: linear-gradient(to right, #606c88, #3f4c6b);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .icon {
+            height: 75px;
+            width: 80px;
+            background-image: url("https://logowik.com/content/uploads/images/ucla-bruins8821.jpg");
+            background-position: center;
+            background-size: cover;
+            margin-right: 80px;
+        }
+        .head h2 {
+            font-size: 24px;
+            margin: 0;
+            margin-top: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            padding: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #a8d0e6;
+            text-decoration: underline;
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            width: 90%;
+            margin: 20px auto;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+        }
+        h3, h4, p {
+            color: black;
+            text-align: center;
+        }
+        p{
+            font-size: 24px;
+            color: red;
+        }
+        img {
+            width: 300px; /* Larger image size */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5%;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .image-section div {
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="icon"></div>
+        <div class="head">
+            <h2>Brain Tumor Detection</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Prediction: {{ prediction }}</h2>
+        <p><strong>{{ message }}</strong></p>
+        <p>{{ tumor_type }}</p>
+
+        <h3>Processed Images:</h3>
+        {% if images %}
+        <div class="image-section">
+            {% for key, image in images.items() %}
+            <div>
+                <h4>{{ key.replace('_', ' ').title() }}</h4>
+                <img src="data:image/jpeg;base64,{{ image }}" alt="{{ key.replace('_', ' ').title() }}">
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>No processed images available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

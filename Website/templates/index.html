@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" %3E%3Cg fill="%23ddd" fill-opacity="0.4"%3E%3Cpath d="M0 100 V10 L20 0 L40 10 L60 100 L80 10 L100 0 V100z" /%3E%3C/g%3E%3C/svg%3E');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background: linear-gradient(to right, #606c88, #3f4c6b);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            height: 75px;
+            width: 80px;
+            background-image: url("https://logowik.com/content/uploads/images/ucla-bruins8821.jpg");
+            background-position: center;
+            background-size: cover;
+            margin-right: 165px;
+        }
+
+        .head {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            padding: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #a8d0e6;
+            text-decoration: underline;
+        }
+
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            width: 50%; /* Set width to half of the container */
+            margin: 0 auto; /* Center the section horizontally */
+        }
+
+        h1, h2, h3, h4, p {
+            margin: 0;
+            padding-bottom: 15px;
+        }
+        p{
+            font-size: 20px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        article {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="icon"></div>
+        <div class="head">
+            <h2>Brain Tumor Detection</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="/detect">Detect Brain Tumor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid">
+        <div class="section">
+            <article>
+                <h1>What is the Brain Tumor?</h1>
+                <p>A brain tumor is an abnormal growth of cells in the brain or skull that can be benign (noncancerous) or malignant (cancerous): 
+                    Brain tumors can develop in many parts of the brain, including the brainstem, sinuses, nasal cavity, and skull base.</p>
+            </article>
+        </div>
+        <div class="section">
+            <article>
+                <h1>Importance of early detection</h1>
+                <p>The brain is the central organ that regulates essential functions such as memory, cognition, sensory of vision, touching and hearing. Any abnormal growth or disruption in the brain significantly impacts these functions, making early detection critical.</p>
+                <p>Brain tumors are among the top 10 causes of death globally.</p>
+                <p>Early identification offers:1. Improved chances of successful treatment. 2. Reduced risk of permanent neurological damage. 3. Enhanced quality of life for patients.</p>
+            </article>
+        </div>
+        <div class="section">
+            <article>
+                <p>This website used the trained CNN model with high accuracy (99%) to help identify the brain tumor.</p>
+                <p>M209 Project. Team: Wenjia Qi, Kaiwen Xue</p>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

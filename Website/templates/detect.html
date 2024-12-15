@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detection</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/checkout/">
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" %3E%3Cg fill="%23ddd" fill-opacity="0.4"%3E%3Cpath d="M0 100 V10 L20 0 L40 10 L60 100 L80 10 L100 0 V100z" /%3E%3C/g%3E%3C/svg%3E');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        header {
+            background: linear-gradient(to right, #606c88, #3f4c6b);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .icon {
+            height: 75px;
+            width: 80px;
+            background-image: url("https://logowik.com/content/uploads/images/ucla-bruins8821.jpg");
+            background-position: center;
+            background-size: cover;
+            margin-right: 80px;
+        }
+        h2{
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            padding: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #a8d0e6;
+            text-decoration: underline;
+        }
+        .info {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .container1 {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            width: 80%;
+            margin: auto;
+        }
+        .file-field {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .file-label {
+            background-color: #eee;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+        }
+        .file-input {
+            display: none;
+        }
+        .btn {
+            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+            margin-left: 15px;
+        }
+        .btn:hover {
+            background: #4CAF50;
+        }
+        p{
+            font-size: 20px;
+        }
+    </style> 
+</head>
+<body>
+    <header>
+        <div class="icon"></div>
+        <div class="head">
+            <h2>Brain Tumor Detection</h2>
+        </div>
+        <nav>
+            <ul>    
+                <li><a href="/">Home</a></li>          
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="info">
+        <p>Upload the MRI image of the Brain.<br>Please upload jpg format images.</p>
+        <div class="top">
+            <div class="container1">
+                <form action="/result" class="md-form" enctype="multipart/form-data" method="post">
+                    <label for="myfile" class="file-label">Choose file<i class="fas fa-upload ml-3" aria-hidden="true"></i></label>
+                    <input type="file" name="file" id="myfile" class="file-input" accept=".jpg" multiple required>
+                    <button type="submit" class="btn">Submit to Detect</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
